@@ -1,0 +1,1 @@
+Spectacle is a display and annotation tool for (primarily proteomic) MSMS spectra, designed primarily for easy generation of publication-ready figures.
