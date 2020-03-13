@@ -1,12 +1,21 @@
 /* App */
 
+@font-face {
+ font-family: 'Roboto';
+ src: url('../ttf/Roboto/Roboto-Regular.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal;
+}
+
 #spectacle {
  display: block;
  position: absolute;
  top: 0; left: 0; right: 0px;
  height: 100%;
  margin: 0px 0px 0px 0px;
- font-family: Verdana;
+
+ --fontFamily: 'Roboto';
+ font-family: var(--fontFamily);
  font-size: 12pt;
  text-rendering: optimizeLegibility;
  -webkit-font-smoothing: antialiased;
@@ -27,7 +36,7 @@
  --selected: blue;
  --outlineWidth: 1px;
  --shadowWidth: 1px;
- --progress: lawngreen;
+ --progress: CornflowerBlue;
 
  /* Sizes */
  --goldenRatio: 1.618;
@@ -336,19 +345,31 @@
  vertical-align: top;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number'] {
- text-align: center;
-}
-
 #spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='text'] {
  width: 100px;
 }
+
+#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number'],
+#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='text'] {
+ text-align: center;
+ border: 1px solid var(--outline);
+ -moz-appearance:textfield;
+}
+
+
+#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number']::-webkit-inner-spin-button,
+#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number']::-webkit-outer-spin-button {
+ -webkit-appearance: none;
+ opacity: 0;
+ margin: 0;
+}
+
 
 #spectacle > #spc_ele_dialogs > .spc_cls_dialog select.spc_cls_dialog_item {
  height: 30px;
  padding: 0px;
  width: 450px;
- font-family: Verdana;
+ font-family: var(--fontFamily);
  font-size: 12pt;
  background: linear-gradient(90deg, lightblue 0%, white 0%, white 100%);
  background-image: url(../img/dropdownArrow.svg);
