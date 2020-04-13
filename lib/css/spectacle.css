@@ -183,21 +183,15 @@
 }
 
 #spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_importButton {
- background-image: url(../img/spc_ele_importButton.svg);
+ background-image: url(../img/spc_ele_importButton.png);
 }
-
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_sizeButton {
- background-image: url(../img/spc_ele_sizeButton.svg);
-}
-
 
 #spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_annotateButton {
  background-image: url(../img/spc_ele_annotateButton.svg);
 }
 
-
 #spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_exportButton {
- background-image: url(../img/spc_ele_exportButton.svg);
+ background-image: url(../img/spc_ele_exportButton.png);
 }
 
 
