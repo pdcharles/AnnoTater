@@ -1,12 +1,5 @@
 /* App */
 
-@font-face {
- font-family: 'Roboto';
- src: url('../ttf/Roboto/Roboto-Regular.ttf') format('truetype');
- font-weight: normal;
- font-style: normal;
-}
-
 #spectacle {
  display: block;
  position: absolute;
