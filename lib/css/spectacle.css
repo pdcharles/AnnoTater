@@ -1,6 +1,6 @@
 /* App */
 
-#spectacle {
+#annotater {
  display: block;
  position: absolute;
  top: 0; left: 0; right: 0px;
@@ -49,7 +49,7 @@
 
 /* Background */
 
-#spectacle > #spc_ele_bg {
+#annotater > #ttr_ele_bg {
  position: absolute;
  top: calc(var(--topbarHeight) + 9px);
  height: calc(100vh - var(--topbarHeight) - 9px);
@@ -58,7 +58,7 @@
  overflow: hidden;
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div {
  position: absolute;
  top: 0px;
  left: 0px;
@@ -72,23 +72,23 @@
  margin-right:auto;
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(1) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(1) {
  transform: translateX(calc(-100% - 20px));
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(3) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(3) {
  transform: translateX(calc(100% + 70px));
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(2) > p:nth-of-type(1) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(2) > p:nth-of-type(1) {
  height: 20px;
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(2) > p:nth-of-type(2) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(2) > p:nth-of-type(2) {
  margin-top: 500px;
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(3) > div:nth-of-type(1) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(3) > div:nth-of-type(1) {
  position: absolute;
  top: 0px;
  left: -50px;
@@ -97,7 +97,7 @@
  background: linear-gradient(90deg, white 0%, grey 100%);
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall > div:nth-of-type(3) > div:nth-of-type(2) {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall > div:nth-of-type(3) > div:nth-of-type(2) {
  position: absolute;
  top: 0px;
  left: -25px;
@@ -106,7 +106,7 @@
  background: linear-gradient(90deg, grey 0%, white 100%);
 }
 
-#spectacle > #spc_ele_bg > #spc_ele_bg_figSmall p {
+#annotater > #ttr_ele_bg > #ttr_ele_bg_figSmall p {
  margin-top: 0px;
  display: inline-block;
  color: transparent;
@@ -117,7 +117,7 @@
 
 /* Top Bar */
 
-#spectacle > #spc_ele_topbar {
+#annotater > #ttr_ele_topbar {
  position: fixed;
  overflow: hidden;
  display: flex;
@@ -133,73 +133,82 @@
  z-index: 1;
 }
 
-#spectacle > #spc_ele_topbar > div {
+#annotater > #ttr_ele_topbar > div {
  display: flex;
  flex-direction: row;
  align-items: center;
  justify-content: space-between;
 }
 
-#spectacle > #spc_ele_topbar div * {
+#annotater > #ttr_ele_topbar div * {
  margin-right: 10px;
 }
 
-#spectacle > #spc_ele_topbar div *:last-child() {
+#annotater > #ttr_ele_topbar div *:last-child() {
  margin-right: 0px;
 }
 
-#spectacle > #spc_ele_topbar span {
+#annotater > #ttr_ele_topbar span {
  color: var(--title);
  font-size: 1.5 em;
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton {
- border-radius: 3px;
+#annotater > #ttr_ele_topbar #ttr_ele_logo {
+ height: 40px;
+ width: 40px;
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: 30px 30px;
+ background-image: url(../img/logo.jpg);
+}
+
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton {
  height: 40px;
  width: 40px;
  background-repeat: no-repeat;
  background-position: center center;
  background-size: 30px 30px;
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--shadow);
+ border-radius: 3px;
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton:hover {
- box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 1px var(--highlight);
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton:hover {
+ box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--highlight);
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton.disable {
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton.disable {
  filter: opacity(50%);
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton.disable:hover {
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton.disable:hover {
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--shadow);
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_importButton {
- background-image: url(../img/spc_ele_importButton.png);
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton#ttr_ele_importButton {
+ background-image: url(../img/ttr_ele_importButton.png);
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_annotateButton {
- background-image: url(../img/spc_ele_annotateButton.svg);
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton#ttr_ele_annotateButton {
+ background-image: url(../img/ttr_ele_annotateButton.svg);
 }
 
-#spectacle > #spc_ele_topbar .spc_cls_topbarButton#spc_ele_exportButton {
- background-image: url(../img/spc_ele_exportButton.png);
+#annotater > #ttr_ele_topbar .ttr_cls_topbarButton#ttr_ele_exportButton {
+ background-image: url(../img/ttr_ele_exportButton.png);
 }
 
 
-#spectacle > #spc_ele_topbar a:link, a:visited {
+#annotater > #ttr_ele_topbar a:link, a:visited {
  color: var(--link);
  font-size: 1.5 em;
 }
 
-#spectacle > #spc_ele_topbar a:hover, a:active {
+#annotater > #ttr_ele_topbar a:hover, a:active {
  color: var(--highlight);
 }
 
 /* Spectra Display */
 
-#spectacle > #spc_ele_spectra > .spc_cls_spectrum {
+#annotater > #ttr_ele_spectra > .ttr_cls_spectrum {
  display: block;
  position: absolute;
  top: calc(var(--topbarHeight) + var(--topbarToMainPanelMargin));
@@ -214,13 +223,13 @@
  background: white;
  /* box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline); */
 }
-#spectacle > #spc_ele_spectra > .spc_cls_spectrum.hide {
+#annotater > #ttr_ele_spectra > .ttr_cls_spectrum.hide {
  visibility: none;
 }
 
 /* Welcome Panel */
 
-#spectacle > #spc_ele_welcomePanel  {
+#annotater > #ttr_ele_welcomePanel  {
  display: block;
  position: absolute;
  top: calc(var(--topbarHeight) + var(--topbarToMainPanelMargin));
@@ -236,7 +245,7 @@
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline);
 }
 
-#spectacle > #spc_ele_welcomePanel > h1 {
+#annotater > #ttr_ele_welcomePanel > h1 {
  display: block;
  position: relative;
  left: 0;
@@ -248,7 +257,7 @@
  max-height:80%
 }
 
-#spectacle > #spc_ele_welcomePanel > img {
+#annotater > #ttr_ele_welcomePanel > img {
  display: block;
  max-width:100%;
  max-height:80%;
@@ -256,13 +265,13 @@
  margin-right: auto;
 }
 
-#spectacle > #spc_ele_welcomePanel.hide {
+#annotater > #ttr_ele_welcomePanel.hide {
  display: none;
 }
 
 /* Dialogs */
   
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog {
  position: absolute;
  top: var(--topbarHeight);
  left: 0;
@@ -279,18 +288,18 @@
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline);
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromTopBar {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromTopBar {
  transform: translateY(-110%);
  visibility: hidden; 
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromTopBar.hide {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromTopBar.hide {
  animation: slide-out 0.25s forwards;
 }
 @keyframes slide-out {
  0% { transform: translateY(0%); visibility: visible; }
  100% { transform: translateY(-100%);  visibility: hidden; }
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromTopBar.show {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromTopBar.show {
  animation: slide-in 0.25s forwards;
 }
 @keyframes slide-in {
@@ -298,19 +307,19 @@
  100% {  transform: translateY(0%);  visibility: visible; }
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromMidScreen {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromMidScreen {
  transform: scale(0);
  visibility: hidden;
  transform-origin: 50% 50%;
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromMidScreen.hide {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromMidScreen.hide {
  animation: shrink 0.25s forwards;
 }
 @keyframes shrink {
  0% { transform: scale(1); visibility: visible; }
  100% { transform: scale(0);  visibility: hidden; }
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog_fromMidScreen.show {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog_fromMidScreen.show {
  animation: grow 0.25s forwards;
 }
 @keyframes grow {
@@ -318,19 +327,19 @@
  100% {  transform: scale(1); visibility: visible; }
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog * {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog * {
  display: inline-block;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .hide {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .hide {
  display: none;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .show {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .show {
  display: inline-block;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_divider {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_divider {
  position: relative;
  margin-bottom: var(--dialogPadding);
  width: 100%;
@@ -339,18 +348,18 @@
  border-top: var(--outlineWidth) solid var(--outline);
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_button {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_button {
  vertical-align: middle;
  text-align: center;
- box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 1px var(--shadow);
+ box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--shadow);
  border-radius: 3px;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_button:hover {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_button:hover {
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 1px var(--highlight);
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_interstitialButton {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_interstitialButton {
  position: relative;
  width: 200px;
  height: 20px;
@@ -359,17 +368,17 @@
  clear: left;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_rejectButton,
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_acceptButton {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_rejectButton,
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_acceptButton {
  position: absolute;
  width: 60px;
  height: 20px;
  bottom: 10px;
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_rejectButton {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_rejectButton {
  right: 90px;
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_acceptButton {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_acceptButton {
  right: 10px;
 }
 
@@ -378,12 +387,12 @@
  50% { background: red; }
  100% { background: white; }
 }
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_acceptButton.warn {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_acceptButton.warn {
  animation: flashRed 0.5s 1;
 }
 
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item {
  position: relative;
  margin-bottom: var(--dialogPadding);
  width: 100%;
@@ -392,51 +401,51 @@
  line-height: 2em;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item * {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item * {
  margin-right: 10px;
  vertical-align: baseline;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item label {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item label {
  margin-right: 10px;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item span {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item span {
  margin-right: initial;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input {
  height: 20px;
  font-size: 100%;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='checkbox'] {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='checkbox'] {
  height: initial;
  vertical-align: middle;
  margin-bottom: 8px;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='text'] {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='text'] {
  width: 100px;
 }
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number'],
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='text'] {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='number'],
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='text'] {
  text-align: center;
  border: 1px solid var(--outline);
  -moz-appearance:textfield;
 }
 
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number']::-webkit-inner-spin-button,
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item input[type='number']::-webkit-outer-spin-button {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='number']::-webkit-inner-spin-button,
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='number']::-webkit-outer-spin-button {
  -webkit-appearance: none;
  opacity: 0;
  margin: 0;
 }
 
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog .spc_cls_dialog_item select {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item select {
  height: 20px;
  width: 150px;
  padding: 0px;
@@ -456,36 +465,36 @@
 }
 
 
-#spectacle > #spc_ele_dialogs > .spc_cls_dialog #spc_ele_sourceDialog_dataSource_chooser {
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog #ttr_ele_sourceDialog_dataSource_chooser {
  height: 30px;
  width: 450px;
  background-size: 18px 12px;
  font-size: 12pt;
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_sourceDialog #spc_ele_sourceDialog_mzFileDetails_scanNumber {
+#annotater > #ttr_ele_dialogs > #ttr_ele_sourceDialog #ttr_ele_sourceDialog_mzFileDetails_scanNumber {
  width: 100px;
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_sourceDialog #spc_ele_sourceDialog_peptideDetails_charge {
+#annotater > #ttr_ele_dialogs > #ttr_ele_sourceDialog #ttr_ele_sourceDialog_peptideDetails_charge {
  width: 40px;
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_sourceDialog #spc_ele_sourceDialog_fixedModifications_table td:nth-child(2) select{
+#annotater > #ttr_ele_dialogs > #ttr_ele_sourceDialog #ttr_ele_sourceDialog_fixedModifications_table td:nth-child(2) select{
  width: 200px;
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_sourceDialog .spc_cls_sourceDialog_sequence {
+#annotater > #ttr_ele_dialogs > #ttr_ele_sourceDialog .ttr_cls_sourceDialog_sequence {
  width: 250px;
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_sourceDialog .spc_cls_sourceDialog_position {
+#annotater > #ttr_ele_dialogs > #ttr_ele_sourceDialog .ttr_cls_sourceDialog_position {
  width: 40px;
 }
 
 
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption  {
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption  {
  display: inline-block;
  --height: 60px;
  --width: calc(var(--height) * var(--goldenRatio));
@@ -500,72 +509,72 @@
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 1px var(--shadow);
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption:hover  {
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption:hover  {
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 1px var(--highlight);
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption.clicked  {
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption.clicked  {
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 2px var(--selected); 
 }
 
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption#spc_ele_annotateDialog_largeFigure {
- background-image: url(../img/spc_ele_annotateDialog_largeFigure.svg);
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption#ttr_ele_annotateDialog_largeFigure {
+ background-image: url(../img/ttr_ele_annotateDialog_largeFigure.svg);
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption#spc_ele_annotateDialog_smallFigure {
- background-image: url(../img/spc_ele_annotateDialog_smallFigure.svg);
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption#ttr_ele_annotateDialog_smallFigure {
+ background-image: url(../img/ttr_ele_annotateDialog_smallFigure.svg);
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption#spc_ele_annotateDialog_slide {
- background-image: url(../img/spc_ele_annotateDialog_slide.svg);
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption#ttr_ele_annotateDialog_slide {
+ background-image: url(../img/ttr_ele_annotateDialog_slide.svg);
 }
 
-#spectacle > #spc_ele_dialogs > #spc_ele_annotateDialog .spc_cls_annotateDialog_sizeOption#spc_ele_annotateDialog_full {
- background-image: url(../img/spc_ele_annotateDialog_full.svg);
+#annotater > #ttr_ele_dialogs > #ttr_ele_annotateDialog .ttr_cls_annotateDialog_sizeOption#ttr_ele_annotateDialog_full {
+ background-image: url(../img/ttr_ele_annotateDialog_full.svg);
 }
 
 
 /* OptionTables */
 
-#spectacle .spc_cls_optionTable {
+#annotater .ttr_cls_optionTable {
  display: inline-table !important;
  border-collapse: collapse;
  position: relative;
 }
 
-#spectacle .spc_cls_optionTable * {
+#annotater .ttr_cls_optionTable * {
  display: revert !important;
  margin-right: 0px !important;
  text-align: center;
 }
 
-#spectacle .spc_cls_optionTable tr,
-#spectacle .spc_cls_optionTable th,
-#spectacle .spc_cls_optionTable td {
+#annotater .ttr_cls_optionTable tr,
+#annotater .ttr_cls_optionTable th,
+#annotater .ttr_cls_optionTable td {
  border: 1px solid var(--outline);
  padding: 0px;
  height: 20px;
 }
 
-#spectacle .spc_cls_optionTable th,
-#spectacle .spc_cls_optionTable td.spc_cls_optionTable_cell {
+#annotater .ttr_cls_optionTable th,
+#annotater .ttr_cls_optionTable td.ttr_cls_optionTable_cell {
  padding-left: 10px;
  padding-right: 10px;
 }
 
-#spectacle .spc_cls_optionTable select {
+#annotater .ttr_cls_optionTable select {
  box-shadow: none !important;
 }
 
-#spectacle .spc_cls_optionTable .pre {
+#annotater .ttr_cls_optionTable .pre {
  display: block;
  unicode-bidi: embed;
  font-family: monospace;
  white-space: pre;
 }
 
-#spectacle .spc_cls_optionTable .spc_cls_optionTable_plus {
+#annotater .ttr_cls_optionTable .ttr_cls_optionTable_plus {
  position: absolute;
  right: -15px;
  bottom: 2px;
