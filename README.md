@@ -1,1 +1,1 @@
-Spectacle is a display and annotation tool for (primarily proteomic) MSMS spectra, designed primarily for easy generation of publication-ready figures.
+[AnnoTater](attotater.htm) is a display and annotation tool for proteomic MSMS spectra, designed primarily for easy generation of publication-ready figures.
