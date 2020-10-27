@@ -43,8 +43,13 @@
  --mainPanelWidth: calc(var(--mainPanelHeight) * var(--goldenRatio));
 
  /* Dialogs */
- --dialogPadding: 20px;
+ --dialogItemPadding: 20px;
+ --dialogLinePadding: 10px;
 
+}
+
+#annotater .disable {
+ filter: opacity(50%);
 }
 
 /* Background */
@@ -176,10 +181,6 @@
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--highlight);
 }
 
-#annotater > #ttr_ele_topbar .ttr_cls_topbarButton.disable {
- filter: opacity(50%);
-}
-
 #annotater > #ttr_ele_topbar .ttr_cls_topbarButton.disable:hover {
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px var(--shadowWidth) var(--shadow);
 }
@@ -276,14 +277,14 @@
  top: var(--topbarHeight);
  left: 0;
  right: 0;
- height: calc((100vh - var(--topbarHeight) - 2*var(--dialogPadding)) * 0.95); 
- width: calc((100vw - 2*var(--dialogPadding)) * 0.95);
+ height: calc((100vh - var(--topbarHeight) - 2*var(--dialogItemPadding)) * 0.95); 
+ width: calc((100vw - 2*var(--dialogItemPadding)) * 0.95);
  min-height: var(--mainPanelMinHeight);
  min-width: var(--mainPanelMinWidth);
  margin-left:auto;
  margin-right:auto;
  overflow: hidden;
- padding: var(--dialogPadding);
+ padding: var(--dialogItemPadding);
  background: var(--bg);
  box-shadow: 0px 0px 0px var(--outlineWidth) var(--outline);
 }
@@ -341,7 +342,7 @@
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_divider {
  position: relative;
- margin-bottom: var(--dialogPadding);
+ margin-bottom: var(--dialogItemPadding);
  width: 100%;
  float: left;
  clear: left;
@@ -360,12 +361,11 @@
 }
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_interstitialButton {
- position: relative;
- width: 200px;
+ padding-left: 5px;
+ padding-right: 5px;
+ min-width: 150px;
  height: 20px;
- margin-bottom: var(--dialogPadding);
- float: left;
- clear: left;
+ margin-bottom: var(--dialogItemPadding);
 }
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_rejectButton,
@@ -394,24 +394,20 @@
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item {
  position: relative;
- margin-bottom: var(--dialogPadding);
+ margin-bottom: var(--dialogItemPadding);
  width: 100%;
  float: left;
  clear: left;
- line-height: 2em;
 }
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item * {
  margin-right: 10px;
  vertical-align: baseline;
+ margin-bottom: var(--dialogLinePadding);
 }
 
-#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item label {
- margin-right: 10px;
-}
-
-#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item span {
- margin-right: initial;
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item * > span {
+ margin-right: 0px;
 }
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input {
@@ -436,14 +432,12 @@
  -moz-appearance:textfield;
 }
 
-
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='number']::-webkit-inner-spin-button,
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='number']::-webkit-outer-spin-button {
  -webkit-appearance: none;
  opacity: 0;
  margin: 0;
 }
-
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item select {
  height: 20px;
@@ -460,10 +454,17 @@
  -moz-appearance: none;
  appearance: none;
  border: 0px;
- box-shadow: inset 0px 0px 0px var(--outlineWidth) var(--outline), inset 0px 0px 0px 2px var(--shadow);
- border-radius: 3px;
+ box-shadow: inset 0px 0px 0px var(--outlineWidth) var(--outline);
 }
 
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='checkbox'].ttr_cls_dialog_expander ~ * {
+ display: none;
+}
+
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='checkbox'].ttr_cls_dialog_expander ~ label:first-of-type,
+#annotater > #ttr_ele_dialogs > .ttr_cls_dialog .ttr_cls_dialog_item input[type='checkbox'].ttr_cls_dialog_expander:checked ~ * {
+ display: inline-block;
+}
 
 #annotater > #ttr_ele_dialogs > .ttr_cls_dialog #ttr_ele_sourceDialog_dataSource_chooser {
  height: 30px;
@@ -546,6 +547,8 @@
 #annotater .ttr_cls_optionTable * {
  display: revert !important;
  margin-right: 0px !important;
+ margin-bottom: 0px !important;
+ box-shadow: none !important;
  text-align: center;
 }
 
@@ -561,10 +564,6 @@
 #annotater .ttr_cls_optionTable td.ttr_cls_optionTable_cell {
  padding-left: 10px;
  padding-right: 10px;
-}
-
-#annotater .ttr_cls_optionTable select {
- box-shadow: none !important;
 }
 
 #annotater .ttr_cls_optionTable .pre {
